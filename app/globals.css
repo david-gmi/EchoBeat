@@ -1,0 +1,13 @@
+@tailwind base; /* Importa los estilos base de Tailwind CSS */
+@tailwind components; /* Importa los estilos de los componentes predefinidos de Tailwind CSS */
+@tailwind utilities; /* Importa los estilos de las utilidades predefinidas de Tailwind CSS */
+
+/* Reglas CSS personalizadas */
+
+html,
+body,
+:root {
+  height: 100%; /* Establece la altura del documento al 100% */
+  background-color: black; /* Establece el color de fondo del documento en negro */
+  color-scheme: dark; /* Establece el esquema de color del documento en oscuro */
+}
