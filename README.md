@@ -33,7 +33,7 @@ Características clave:
 ### Instalar paquetes
 
 ```npm
-npm ...
+npm i
 ```
 
 ### Configurar archivo .env
