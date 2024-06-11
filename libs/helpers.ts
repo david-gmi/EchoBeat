@@ -5,7 +5,7 @@ export const getURL = () => {
   let url =
     process?.env?.NEXT_PUBLIC_SITE_URL ?? // Establece esta URL como la URL de tu sitio en el entorno de producción.
     process?.env?.NEXT_PUBLIC_VERCEL_URL ?? // Establecido automáticamente por Vercel.
-    'http://localhost:3000/';
+    'https://echo-beat.vercel.app/';
   // Asegúrate de incluir `https://` cuando no sea localhost.
   url = url.includes('http') ? url : `https://${url}`;
   // Asegúrate de incluir la barra diagonal al final.
