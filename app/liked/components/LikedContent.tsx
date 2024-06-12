@@ -33,9 +33,14 @@ const LikedContent: React.FC<LikedContentProps> = ({
         className="
           flex 
           flex-col 
+          justify-center
+          items-center
+          flex-grow
           gap-y-2 
-          w-full px-6 
+          w-full 
+          px-6 
           text-neutral-400
+          h-full
         "
       >
         No hay canciones marcadas como favoritas.
@@ -58,5 +63,5 @@ const LikedContent: React.FC<LikedContentProps> = ({
     </div>
   );
 }
- 
+
 export default LikedContent;

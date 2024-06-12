@@ -17,6 +17,9 @@ const Liked = async () => {
         w-full 
         overflow-hidden 
         overflow-y-auto
+        flex
+        flex-col
+        justify-between
       "
     >
       <Header>
@@ -58,9 +61,9 @@ const Liked = async () => {
         </div>
       </Header>
       <LikedContent songs={songs} />
+
     </div>
   );
 }
 
 export default Liked;
-

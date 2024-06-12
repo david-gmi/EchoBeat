@@ -36,7 +36,7 @@ const AuthModal = () => {
   return (
     <Modal 
       title="Bienvenido de nuevo" 
-      description="Inicia sesión en tu cuenta." 
+      description="Ingrese a su cuenta." 
       isOpen={isOpen} 
       onChange={onChange} 
     >
@@ -49,8 +49,8 @@ const AuthModal = () => {
           variables: {
             default: {
               colors: {
-                brand: '#000099',
-                brandAccent: '#000099'
+                brand: '#404040',
+                brandAccent: '#1e3a8a'
               }
             }
           }

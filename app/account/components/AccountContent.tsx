@@ -35,35 +35,37 @@ const AccountContent = () => {
   };
 
   return ( 
-    <div className="mb-7 px-6">
-      {!subscription && (
-        <div className="flex flex-col gap-y-4">
-        <p>Ningún plan activo.</p>
-        <Button 
-          onClick={subscribeModal.onOpen}
-          className="w-[300px]"
-        >
-          Suscribirse
-        </Button>
+    <div className="flex flex-col min-h-screen justify-between">
+      <div className="mb-7 px-6">
+        {!subscription && (
+          <div className="flex flex-col gap-y-4">
+            <p>Ningún plan activo.</p>
+            <Button 
+              onClick={subscribeModal.onOpen}
+              className="w-[300px]"
+            >
+              Suscribirse
+            </Button>
+          </div>
+        )}
+        {subscription && (
+          <div className="flex flex-col gap-y-4">
+            <p>Actualmente estás en el plan
+              <b> {subscription?.prices?.products?.name}</b> 
+              .
+            </p>
+            <Button
+              disabled={loading || isLoading}
+              onClick={redirectToCustomerPortal}
+              className="w-[300px]"
+            >
+              Administrar suscripción
+            </Button>
+          </div>
+        )}
       </div>
-      )}
-      {subscription && (
-        <div className="flex flex-col gap-y-4">
-          <p>Actualmente estás en el plan
-            <b> {subscription?.prices?.products?.name}</b> 
-            .
-          </p>
-          <Button
-            disabled={loading || isLoading}
-            onClick={redirectToCustomerPortal}
-            className="w-[300px]"
-          >
-            Administrar suscripción
-          </Button>
-        </div>
-      )}
     </div>
   );
 }
- 
+
 export default AccountContent;

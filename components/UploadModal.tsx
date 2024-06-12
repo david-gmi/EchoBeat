@@ -168,7 +168,7 @@ const UploadModal = () => {
           />
         </div>
         <Button disabled={isLoading} type="submit">
-          Crear
+          Subir canción
         </Button>
       </form>
     </Modal>

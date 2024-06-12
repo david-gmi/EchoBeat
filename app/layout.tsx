@@ -11,10 +11,8 @@ import Player from '@/components/Player'
 
 import './globals.css'
 
-// Se define la fuente Figtree con el subconjunto de caracteres latinos
 const font = Figtree({ subsets: ['latin'] })
 
-// Metadatos de la aplicación
 export const metadata = {
   title: 'EchoBeat App',
   description: 'Música que suena más cerca',
@@ -22,28 +20,30 @@ export const metadata = {
 
 export const revalidate = 0;
 
-// Componente principal que envuelve la aplicación
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  // Se obtienen los productos activos con precios
   const products = await getActiveProductsWithPrices();
-  // Se obtienen las canciones del usuario
   const userSongs = await getSongsByUserId();
 
   return (
-    <html lang="es"> {/* Se establece el idioma del documento */}
-      <body className={font.className}> {/* Se aplica la clase de la fuente */}
-        <ToasterProvider /> {/* Proveedor para mostrar notificaciones */}
-        <SupabaseProvider> {/* Proveedor de Supabase */}
-          <UserProvider> {/* Proveedor de usuario */}
-            <ModalProvider products={products} /> {/* Proveedor de modal con los productos activos */}
-            <Sidebar songs={userSongs}> {/* Barra lateral con las canciones del usuario */}
-              {children} {/* Contenido principal */}
-            </Sidebar>
-            <Player /> {/* Reproductor de música */}
+    <html lang="en">
+      <body className={font.className}>
+        <ToasterProvider />
+        <SupabaseProvider>
+          <UserProvider>
+            <ModalProvider products={products} />
+            <div className="flex flex-col min-h-screen">
+              <Sidebar songs={userSongs}>
+                {children}
+              </Sidebar>
+              <Player />
+            </div>
+            <footer className="bg-gray-800 text-white text-center p-4">
+              Derechos reservados 2024 @David Gmi
+            </footer>
           </UserProvider>
         </SupabaseProvider>
       </body>

@@ -38,15 +38,15 @@ const Modal: React.FC<ModalProps> = ({
             max-h-full 
             h-full 
             md:h-auto 
-            md:max-h-[85vh] 
+            md:max-h-[100vh] 
             w-full 
             md:w-[90vw] 
             md:max-w-[450px] 
             translate-x-[-50%] 
             translate-y-[-50%] 
             rounded-md 
-            bg-neutral-800 
-            p-[25px] 
+            bg-gray-800
+            p-[15px] 
             focus:outline-none
           ">
           <Dialog.Title 
@@ -76,7 +76,7 @@ const Modal: React.FC<ModalProps> = ({
             <button
               className="
                 text-neutral-400 
-                hover:text-white 
+                hover:text-white
                 absolute 
                 top-[10px] 
                 right-[10px] 

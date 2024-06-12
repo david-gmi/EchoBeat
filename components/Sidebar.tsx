@@ -13,6 +13,9 @@ import Box from "./Box";
 import Library from "./Library";
 import { useMemo } from "react";
 
+// Importa tu logo
+import Logo from "../logo/Logo"; // Reemplaza "./Logo" con la ubicación real de tu logo
+
 interface SidebarProps {
   children: React.ReactNode;
   songs: Song[];
@@ -24,7 +27,11 @@ const Sidebar = ({ children, songs }: SidebarProps) => {
 
   const routes = useMemo(() => [
     {
-      icon: HiHome,
+      icon: Logo, // Usa tu logo aquí
+      href: '/'
+    },
+    {
+      icon: HiHome, // Usa tu logo aquí
       label: 'Inicio',
       active: pathname !== '/search',
       href: '/'
@@ -37,7 +44,7 @@ const Sidebar = ({ children, songs }: SidebarProps) => {
     },
   ], [pathname]);
 
-  return (
+return (
     <div 
       className={twMerge(`
         flex 
