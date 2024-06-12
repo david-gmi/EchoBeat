@@ -1,15 +1,16 @@
+// Logo.tsx
 import React from "react";
 
-interface LogoProps {
-  size: number;
+export interface LogoProps { // Cambiado a exportar LogoProps
+  size?: number;
 }
 
-const Logo: React.FC<LogoProps> = ({ size }) => {
+const Logo: React.FC<LogoProps> = ({ size = 24 }) => {  // Default size
   const logoStyle = {
     display: "block",
     margin: "auto",
-    width: size * 7, // Double the size
-    height: "auto" // Maintain aspect ratio
+    width: size * 7, // Ajusta el tamaño según sea necesario
+    height: "auto" // Mantener la relación de aspecto
   };
 
   return (
@@ -22,4 +23,3 @@ const Logo: React.FC<LogoProps> = ({ size }) => {
 }
 
 export default Logo;
-

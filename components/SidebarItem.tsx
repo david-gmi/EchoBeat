@@ -1,9 +1,12 @@
+// SidebarItem.tsx
 import Link from 'next/link';
 import { IconType } from 'react-icons';
 import { twMerge } from 'tailwind-merge';
+import { FC } from 'react';
+import { LogoProps } from '../logo/Logo'; // Asegúrate de importar esto correctamente
 
 interface SidebarItemProps {
-  icon: IconType;
+  icon: IconType | FC<LogoProps>;
   label: string;
   active?: boolean;
   href: string;
@@ -36,7 +39,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
         )
       }
     >
-      <Icon size={26} />
+      <Icon size={26} /> {/* Asegúrate de que el componente `Icon` maneje el prop `size` */}
       <p className="truncate w-100">{label}</p>
     </Link>
    );

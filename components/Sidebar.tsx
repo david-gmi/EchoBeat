@@ -4,6 +4,7 @@ import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
 import { twMerge } from "tailwind-merge";
 import { usePathname } from "next/navigation";
+import { useMemo } from "react";
 
 import { Song } from "@/types";
 import usePlayer from "@/hooks/usePlayer";
@@ -11,9 +12,6 @@ import usePlayer from "@/hooks/usePlayer";
 import SidebarItem from "./SidebarItem";
 import Box from "./Box";
 import Library from "./Library";
-import { useMemo } from "react";
-
-// Importa tu logo
 import Logo from "../logo/Logo"; // Reemplaza "./Logo" con la ubicación real de tu logo
 
 interface SidebarProps {
@@ -27,11 +25,12 @@ const Sidebar = ({ children, songs }: SidebarProps) => {
 
   const routes = useMemo(() => [
     {
-      icon: Logo, // Usa tu logo aquí
+      icon: Logo,
+      label: '', // Añadir una etiqueta para el logo para la key
       href: '/'
     },
     {
-      icon: HiHome, // Usa tu logo aquí
+      icon: HiHome,
       label: 'Inicio',
       active: pathname !== '/search',
       href: '/'
@@ -44,7 +43,7 @@ const Sidebar = ({ children, songs }: SidebarProps) => {
     },
   ], [pathname]);
 
-return (
+  return (
     <div 
       className={twMerge(`
         flex 
@@ -82,5 +81,5 @@ return (
     </div>
   );
 }
- 
+
 export default Sidebar;
