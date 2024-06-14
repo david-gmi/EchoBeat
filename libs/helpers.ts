@@ -4,6 +4,7 @@ import { Price } from '@/types';
 export const getURL = () => {
   let url =
     process?.env?.NEXT_PUBLIC_SITE_URL ?? // Establece esta URL como la URL de tu sitio en el entorno de producción.
+    'https://echo-beat.vercel.app/';
     process?.env?.NEXT_PUBLIC_VERCEL_URL ?? // Establecido automáticamente por Vercel.
     'https://echo-beat.vercel.app/';
   // Asegúrate de incluir `https://` cuando no sea localhost.
