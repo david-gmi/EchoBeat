@@ -26,16 +26,16 @@ const Library: React.FC<LibraryProps> = ({ songs }) => {
 
   const onClick = () => {
     if (!user) {
-      return authModal.onOpen('login'); // Pass the required argument here
+      return authModal.onOpen('sign_in'); // Abrir modal para iniciar sesión
     }
-
+  
     if (!subscription) {
-      return subscribeModal.onOpen();
+      return subscribeModal.onOpen(); // Abrir modal para suscripción
     }
-
-    return uploadModal.onOpen();
+  
+    return uploadModal.onOpen(); // Abrir modal para subida de archivos, etc.
   };
-
+  
   return ( 
     <div className="flex flex-col">
       <div className="flex items-center justify-between px-5 pt-4">
