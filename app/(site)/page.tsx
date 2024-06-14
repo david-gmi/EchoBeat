@@ -1,4 +1,4 @@
-/*
+
 import getSongs from "@/actions/getSongs";
 import Header from "@/components/Header";
 import ListItem from "@/components/ListItem";
@@ -61,8 +61,12 @@ export default async function Home() {
     </div>
   )
 }
-*/
 
+
+
+
+
+/*
 // Código para mostrar el mensaje "EchoBeat App Fuera de Servicio"
 import Header from "@/components/Header";
 
@@ -95,3 +99,4 @@ export default async function Home() {
     </div>
   );
 }
+*/
