@@ -42,7 +42,7 @@ export default async function RootLayout({
               <Player />
             </div>
             <footer className="bg-gray-800 text-white text-center p-4">
-              Derechos reservados 2024 @David Gmi
+              Derechos reservados 2024 @David GMI | Revisó Ing. Illescas
             </footer>
           </UserProvider>
         </SupabaseProvider>
