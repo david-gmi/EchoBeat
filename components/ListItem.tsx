@@ -24,11 +24,12 @@ const ListItem: React.FC<ListItemProps> = ({
   
   const onClick = () => {
     if (!user) {
-      return authModal.onOpen();
+      return authModal.onOpen('sign_in'); // Abrir modal de inicio de sesión
     }
-
-    router.push(href);
+  
+    router.push(href); // Navegar al enlace si el usuario está autenticado
   };
+  
 
   return ( 
     <button
