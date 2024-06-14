@@ -1,5 +1,4 @@
 import { Song } from "@/types";
-
 import usePlayer from "./usePlayer";
 import useSubscribeModal from "./useSubscribeModal";
 import useAuthModal from "./useAuthModal";
@@ -13,13 +12,16 @@ const useOnPlay = (songs: Song[]) => {
 
   const onPlay = (id: string) => {
     if (!user) {
-      return authModal.onOpen();
+      authModal.onOpen('sign_in'); // Abrir modal de inicio de sesión
+      return;
     }
 
     if (!subscription) {
-      return subscribeModal.onOpen();
+      subscribeModal.onOpen(); // Abrir modal de suscripción
+      return;
     }
 
+    // Configurar el reproductor con la canción seleccionada
     player.setId(id);
     player.setIds(songs.map((song) => song.id));
   }
