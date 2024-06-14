@@ -16,7 +16,7 @@ const Search = async ({ searchParams }: SearchProps) => {
   return (
     <div 
       className="
-        bg-neutral-900 
+        bg-blue-700 
         rounded-lg 
         h-full 
         w-full 
@@ -24,10 +24,10 @@ const Search = async ({ searchParams }: SearchProps) => {
         overflow-y-auto
       "
     >
-      <Header className="from-bg-neutral-900">
+      <Header className="from-bg-blue-700">
         <div className="mb-2 flex flex-col gap-y-6">
           <h1 className="text-white text-3xl font-semibold">
-            Search
+            Buscar canción
           </h1>
           <SearchInput />
         </div>
