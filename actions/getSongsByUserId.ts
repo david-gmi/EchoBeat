@@ -9,16 +9,13 @@ const getSongsByUserId = async (): Promise<Song[]> => {
   });
 
   // Obtener el usuario de manera asíncrona
-  const { data: userResponse, error: userError } = await supabase.auth.getUser();
+  const { user, error: userError } = await supabase.auth.getUser();
 
   // Manejar errores al obtener el usuario
   if (userError) {
     console.error("Error al obtener el usuario:", userError.message);
     return [];
   }
-
-  // Extraer el usuario de la respuesta
-  const user = userResponse?.user;
 
   if (!user) {
     console.log("No hay sesión de usuario disponible.");
