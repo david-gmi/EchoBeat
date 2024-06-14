@@ -104,7 +104,7 @@ const SubscribeModal: React.FC<SubscribeModalProps> = ({
   if (subscription) {
     content = (
       <div className="text-center">
-        Ya estás suscrito.
+        Ya estás suscrito a EchoBeat Pro.
       </div>
     )
   }
@@ -112,7 +112,7 @@ const SubscribeModal: React.FC<SubscribeModalProps> = ({
   return (
     <Modal
       title="Solo para usuarios premium"
-      description="Escucha música con Spotify Premium"
+      description="Escucha música con EchoBeat Pro"
       isOpen={subscribeModal.isOpen}
       onChange={onChange}
     >
