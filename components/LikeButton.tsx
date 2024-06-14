@@ -50,16 +50,16 @@ const LikeButton: React.FC<LikeButtonProps> = ({
 
   const handleLike = async () => {
     if (!user) {
-      return authModal.onOpen();
+      return authModal.onOpen('sign_in'); // Abrir modal de inicio de sesión
     }
-
+  
     if (isLiked) {
       const { error } = await supabaseClient
         .from('liked_songs')
         .delete()
         .eq('user_id', user.id)
         .eq('song_id', songId)
-
+  
       if (error) {
         toast.error(error.message);
       } else {
@@ -72,7 +72,7 @@ const LikeButton: React.FC<LikeButtonProps> = ({
           song_id: songId,
           user_id: user.id
         });
-
+  
       if (error) {
         toast.error(error.message);
       } else {
@@ -80,9 +80,10 @@ const LikeButton: React.FC<LikeButtonProps> = ({
         toast.success('Éxito');
       }
     }
-
+  
     router.refresh();
   }
+  
 
   return (
     <button 
