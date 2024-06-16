@@ -13,7 +13,7 @@ export default async function Home() {
   return (
     <div
       className="
-        bg-neutral-900 
+      bg-gray-900
         rounded-lg 
         h-full 
         w-full 
@@ -76,7 +76,7 @@ export default async function Home() {
   return (
     <div
       className="
-        bg-neutral-900 
+        bg-gray-900 
         rounded-lg 
         h-full 
         w-full 
