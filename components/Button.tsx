@@ -18,7 +18,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
         `
         w-full 
         rounded-full 
-        bg-blue-700
+       bg-blue-700 
         border
         border-transparent
         px-3 
