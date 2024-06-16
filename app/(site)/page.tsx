@@ -1,3 +1,4 @@
+
 import getSongs from "@/actions/getSongs";
 import Header from "@/components/Header";
 import ListItem from "@/components/ListItem";
@@ -60,3 +61,42 @@ export default async function Home() {
     </div>
   )
 }
+
+
+
+
+
+/*
+// Código para mostrar el mensaje "EchoBeat App Fuera de Servicio"
+import Header from "@/components/Header";
+
+export const revalidate = 0;
+
+export default async function Home() {
+  return (
+    <div
+      className="
+        bg-neutral-900 
+        rounded-lg 
+        h-full 
+        w-full 
+        overflow-hidden 
+        overflow-y-auto
+      "
+    >
+      <Header>
+        <div className="mb-2">
+          <h1 
+            className="
+            text-white 
+              text-3xl 
+              font-semibold
+            ">
+              EchoBeat App Fuera de Servicio
+          </h1>
+        </div>
+      </Header>
+    </div>
+  );
+}
+*/
