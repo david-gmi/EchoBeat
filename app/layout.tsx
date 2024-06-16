@@ -41,7 +41,7 @@ export default async function RootLayout({
               </Sidebar>
               <Player />
             </div>
-            <footer className="bg-blue-600 text-white text-center p-4">
+            <footer className="bg-gray-800 text-white text-center p-4">
               Derechos reservados 2024 @David GMI | Revisó Ing. Illescas
             </footer>
           </UserProvider>
